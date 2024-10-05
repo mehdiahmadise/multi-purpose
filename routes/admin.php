@@ -12,4 +12,6 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard
 
 Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
 
+Route::put('/profile', [ProfileController::class, 'update'])->name('profile.update');
+
 
