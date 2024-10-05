@@ -15,8 +15,18 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('avatar')->default('/default/default.png');
+            $table->string('banner')->default('/default/breadcroumb_bg.jpg');
             $table->enum('user_type', ['admin', 'user'])->default('user');
             $table->string('email')->unique();
+            $table->string('phone')->nullable();
+            $table->string('address')->nullable();
+            $table->text('about')->nullable();
+            $table->string('website')->nullable();
+            $table->string('fb_link')->nullable();
+            $table->string('x_link')->nullable();
+            $table->string('in_link')->nullable();
+            $table->string('wa_link')->nullable();
+            $table->string('insta_link')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
